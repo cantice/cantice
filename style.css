@@ -110,7 +110,7 @@ header {
 }
 
 .btn-primary::after {
-    background-image: url('/icons/arrow-light.svg');
+    background-image: url('icons/arrow-light.svg');
 }
 
 .btn-primary:hover {
@@ -128,7 +128,7 @@ header {
 }
 
 .btn-primary-inverse::after {
-    background-image: url('/icons/arrow-dark.svg');
+    background-image: url('icons/arrow-dark.svg');
 }
 
 .btn-primary-inverse:hover {
@@ -148,7 +148,7 @@ header {
 }
 
 .btn-secondary::after {
-    background-image: url('/icons/arrow-dark.svg');
+    background-image: url('icons/arrow-dark.svg');
 }
 
 .btn-secondary:hover {
@@ -168,7 +168,7 @@ header {
 }
 
 .btn-secondary-inverse::after {
-    background-image: url('/icons/arrow-light.svg');
+    background-image: url('icons/arrow-light.svg');
 }
 
 .btn-secondary-inverse:hover {
