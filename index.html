@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantice</title>
+    <link rel="icon" type="image/x-icon" href="/images/cantice-favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/solar.css">
+</head>
+<body class="gradient-background-animated">
+    <header>
+        <div class="header-wrapper">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="/" class="logo">Cantice</a>
+                    <nav class="nav-links">
+                        <a href="#">Projects</a>
+                        <a href="#">Articles</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <a href="#" class="subscribe-button">Subscribe</a>
+                    <button class="hamburger" aria-label="Menu">☰</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="mobile-nav">
+        <nav class="nav-links">
+            <a href="#">Projects</a>
+            <a href="#">Articles</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#" class="subscribe-button mobile">Subscribe</a>
+        </nav>
+    </div>
+
+    <main class="container">
+        <div class="content-wrapper">
+            <div class="section">
+                <div>
+                    <img class="top-image" src="/images/solar-time-sundial.svg" alt="Local solar time zone">
+                </div>
+                <div class="intro-section">
+                    <h1>Local solar time</h1>
+                    <p>The local time in your time zone likely differs from the 'real' time at your location. Check what time it really is with local solar time.</p>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <section>
+                  <!-- Solar Time Calculator -->
+                  <div class="solar-calculator">
+                    
+                    <div class="time-display">
+                        <div class="time-block">
+                            <h3>Local Solar Time</h3>
+                            <div id="solar-time">--:--:--</div>
+                            <div id="local-date">--/--/----</div>
+                        </div>
+                        <div class="time-block">
+                            <h3>Local Time</h3>
+                            <div id="local-time">--:--:--</div>
+                            <div id="time-deviation">-- min</div>
+                        </div>
+                    </div>
+
+                    <div class="location-input-container">
+                      <div class="search-box">
+                          <input type="text" id="location-search" placeholder="Search for a location..." autocomplete="off">
+                          <button id="get-current-location" title="Use my current location">
+                              📍
+                          </button>
+                      </div>
+                      <div id="search-results" class="search-results"></div>
+                      <div id="current-location" class="current-location"></div>
+                      
+                      <!-- Keep the original inputs but hide them -->
+                      <div class="coordinate-inputs" style="display: none;">
+                          <div class="input-group">
+                              <label for="latitude">Latitude:</label>
+                              <input type="number" id="latitude" step="0.000001" min="-90" max="90" placeholder="Enter latitude (-90 to 90)">
+                          </div>
+                          <div class="input-group">
+                              <label for="longitude">Longitude:</label>
+                              <input type="number" id="longitude" step="0.000001" min="-180" max="180" placeholder="Enter longitude (-180 to 180)">
+                          </div>
+                      </div>
+                  </div>
+
+                  </div>
+                </section>  
+                <div class="main-content">
+                    <h2>Why your local time might not match the sun's schedule</h2>
+                    <p>That time shown on your clock often differs from what we call <em>local solar time</em>, sometimes by quite a margin. Before railways and fast travel became common in the 19th century, every town simply used their own solar time, where noon was when the sun reached its highest point. This made perfect sense for local life – farmers, merchants, and townspeople could rely on the sun's position to plan their days.</p>
+                
+                    <h2>How railways changed time</h2>
+                    <p>When it was noon in one town, it might be 12:06 PM in a town 60 miles west, but since travel was slow, this small difference hardly mattered. However, as railways connected distant cities and people needed to coordinate across larger distances, this system became impractical. Imagine trying to publish a train schedule when every town along the route used a different time!</p>
+                    
+                    <h2>Living on solar time vs. clock time</h2>
+                    <p>While time zones make modern life more convenient, they create some interesting effects. For instance, if you live in Boston, which is on the eastern edge of the Eastern Time Zone, the sun reaches its highest point around 11:30 AM during parts of the year. Meanwhile, in Detroit, at the western edge of the same time zone, <em>solar noon</em> might not occur until almost 12:45 PM.</p>
+                
+                    <h3>How solar time impacts culture</h3>
+                    <p>This difference between <em>clock time</em> and <em>sun time</em> can affect your daily life more than you might think. If you've ever wondered why you feel more energetic at certain times in one city compared to another, or why some place have such lively summer evenings, the difference between local solar time and standardized time zones might be the explanation.</p>
+                
+                    <h2>The equation of time</h2>
+                    <p>Adding to this complexity, the Earth's elliptical orbit means that solar noon can shift by up to 16 minutes throughout the year – a phenomenon known as the Equation of Time. This is why sundials don't always match our clocks, even if you're right in the center of your time zone!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="more">
+        <div class="more-title">
+            <h2>More projects</h2>
+        </div>
+        <div class="posts-list">
+            <div class="post-card">
+                <img src="/images/equation-of-time.svg" alt="Post 1">
+                <div class="post-card-content">
+                    <h3>The equation of time</h3>
+                    <p>Lorem ipsum dolor sit amet. Ea voluptate reiciendis et earum laboriosam eos natus tempora.</p>
+                    <button class="btn btn-secondary">
+                        Learn more
+                        <span class="btn-arrow"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="/images/daylight-saving-time.svg" alt="Post 2">
+                <div class="post-card-content">
+                    <h3>Daylight saving time</h3>
+                    <p>Lorem ipsum dolor sit amet. Ea voluptate reiciendis et earum laboriosam eos natus tempora.</p>
+                    <button class="btn btn-secondary">
+                        Learn more
+                        <span class="btn-arrow"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="/images/solar-time-sundial.svg" alt="Post 3">
+                <div class="post-card-content">
+                    <h3>Post Title 1</h3>
+                    <p>Lorem ipsum dolor sit amet. Ea voluptate reiciendis et earum laboriosam eos natus tempora.</p>
+                    <button class="btn btn-secondary">
+                        Learn more
+                        <span class="btn-arrow"></span>
+                    </button>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Cantice. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/main.js"></script>
+    <script src="/solar.js"></script>
+</body>
+</html>
