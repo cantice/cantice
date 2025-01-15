@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150">
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="galaxy" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f0f1a"/>
+    </radialGradient>
+    
+    <!-- Base line gradient -->
+    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#762314" stop-opacity="1"/>
+      <stop offset="50%" style="stop-color:#a64332" stop-opacity="1"/>
+      <stop offset="100%" style="stop-color:#762314" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Moving glow gradient -->
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#762314" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#a64332" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a64332" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#a64332" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#762314" stop-opacity="0"/>
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        from="-1" to="1"
+        dur="5s"
+        repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+    </filter>
+  </defs>
+
+  <!-- Galaxy background -->
+  <rect width="300" height="150" fill="url(#galaxy)"/>
+  
+  <!-- Animated stars with increased twinkling range -->
+  <g id="stars">
+    <circle cx="50" cy="30" r="0.5" fill="white">
+      <animate attributeName="opacity"
+               values="0.2;0.9;0.2"
+               dur="3.5s"
+               repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="40" r="0.6" fill="white">
+      <animate attributeName="opacity"
+               values="0.2;0.9;0.2"
+               dur="4.1s"
+               repeatCount="indefinite"
+               begin="0.5s"/>
+    </circle>
+    <circle cx="150" cy="60" r="0.4" fill="white">
+      <animate attributeName="opacity"
+               values="0.2;0.9;0.2"
+               dur="3.7s"
+               repeatCount="indefinite"
+               begin="1.0s"/>
+    </circle>
+    <circle cx="200" cy="70" r="0.7" fill="white">
+      <animate attributeName="opacity"
+               values="0.2;0.9;0.2"
+               dur="4.3s"
+               repeatCount="indefinite"
+               begin="1.5s"/>
+    </circle>
+    <circle cx="75" cy="100" r="0.5" fill="white">
+      <animate attributeName="opacity"
+               values="0.2;0.9;0.2"
+               dur="3.9s"
+               repeatCount="indefinite"
+               begin="2.0s"/>
+    </circle>
+    <circle cx="125" cy="80" r="0.4" fill="white">
+      <animate attributeName="opacity"
+               values="0.2;0.9;0.2"
+               dur="4.5s"
+               repeatCount="indefinite"
+               begin="0.7s"/>
+    </circle>
+    <circle cx="175" cy="30" r="0.6" fill="white">
+      <animate attributeName="opacity"
+               values="0.2;0.9;0.2"
+               dur="3.8s"
+               repeatCount="indefinite"
+               begin="1.2s"/>
+    </circle>
+    <circle cx="225" cy="110" r="0.5" fill="white">
+      <animate attributeName="opacity"
+               values="0.2;0.9;0.2"
+               dur="4.2s"
+               repeatCount="indefinite"
+               begin="1.8s"/>
+    </circle>
+  </g>
+
+  <!-- Grid lines -->
+  <g stroke="#333355" stroke-width="0.25">
+    <!-- Horizontal lines -->
+    <path d="M 20 30 L 280 30"/>
+    <path d="M 20 50 L 280 50"/>
+    <path d="M 20 75 L 280 75"/>
+    <path d="M 20 100 L 280 100"/>
+    <path d="M 20 120 L 280 120"/>
+    
+    <!-- Vertical month lines -->
+    <path d="M 20 30 L 20 120"/>
+    <path d="M 42 30 L 42 120"/>
+    <path d="M 64 30 L 64 120"/>
+    <path d="M 86 30 L 86 120"/>
+    <path d="M 108 30 L 108 120"/>
+    <path d="M 130 30 L 130 120"/>
+    <path d="M 152 30 L 152 120"/>
+    <path d="M 174 30 L 174 120"/>
+    <path d="M 196 30 L 196 120"/>
+    <path d="M 218 30 L 218 120"/>
+    <path d="M 240 30 L 240 120"/>
+    <path d="M 262 30 L 262 120"/>
+    <path d="M 280 30 L 280 120"/>
+  </g>
+
+  <!-- Base curve with reduced opacity -->
+  <path d="M 20 80
+           C 25 82, 30 90, 42 98
+           C 54 106, 70 90, 86 82
+           C 102 74, 115 71, 130 72
+           C 145 73, 160 78, 174 84
+           C 188 90, 205 65, 218 55
+           C 231 45, 245 45, 262 70
+           C 271 83, 275 80, 280 80"
+        fill="none"
+        stroke="url(#lineGradient)"
+        stroke-width="1.5"
+        filter="url(#glow)"/>
+
+  <!-- Moving glow overlay -->
+  <path d="M 20 80
+           C 25 82, 30 90, 42 98
+           C 54 106, 70 90, 86 82
+           C 102 74, 115 71, 130 72
+           C 145 73, 160 78, 174 84
+           C 188 90, 205 65, 218 55
+           C 231 45, 245 45, 262 70
+           C 271 83, 275 80, 280 80"
+        fill="none"
+        stroke="url(#glowGradient)"
+        stroke-width="3"
+        filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset"
+             from="300" to="-300"
+             dur="5s"
+             repeatCount="indefinite"/>
+  </path>
+</svg>

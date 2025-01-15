@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150">
+  <!-- Background -->
+  <rect width="300" height="150" fill="#1a1a2e"/>
+  
+  <!-- Stars -->
+  <g id="stars">
+    <!-- Twinkling stars -->
+    <circle cx="80" cy="35" r="0.5" fill="white">
+      <animate 
+        attributeName="opacity" 
+        values="0.8;0.2;0.8;0.6;0.8" 
+        dur="3s" 
+        repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="30" r="0.5" fill="white">
+      <animate 
+        attributeName="opacity" 
+        values="0.8;0.3;0.8;0.5;0.8" 
+        dur="4s" 
+        repeatCount="indefinite"/>
+    </circle>
+    <!-- Static stars -->
+    <circle cx="40" cy="25" r="0.5" fill="white" opacity="0.8"/>
+    <circle cx="120" cy="20" r="0.5" fill="white" opacity="0.8"/>
+    <circle cx="220" cy="45" r="0.5" fill="white" opacity="0.8"/>
+    <circle cx="280" cy="40" r="0.5" fill="white" opacity="0.8"/>
+  </g>
+
+  <!-- Gradients -->
+  <defs>
+    <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#fff7e6"/>
+      <stop offset="40%" style="stop-color:#ffd700"/>
+      <stop offset="100%" style="stop-color:#ff8c00"/>
+    </radialGradient>
+    
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0"/>
+    </radialGradient>
+    
+    <linearGradient id="earthGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#762314;stop-opacity:0.7"/>
+      <stop offset="40%" style="stop-color:#4b3b5d;stop-opacity:1"/>
+      <stop offset="70%" style="stop-color:#2b5797;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2b4875;stop-opacity:1"/>
+      <animate attributeName="x1" values="100%;200%;100%" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0%;100%;0%" dur="20s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="shadowGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2b1f31;stop-opacity:0.6"/>
+      <stop offset="20%" style="stop-color:#2b1f31;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#2b1f31;stop-opacity:0"/>
+    </linearGradient>
+
+    <linearGradient id="dialShadowGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" style="stop-color:#2b1f31;stop-opacity:0.5"/>
+      <stop offset="85%" style="stop-color:#2b1f31;stop-opacity:0"/>
+    </linearGradient>
+
+    <!-- Add blur filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Sun glow effect -->
+  <circle cx="240" cy="40" r="28" fill="url(#glowGradient)" filter="url(#glow)">
+    <animate 
+      attributeName="r" 
+      values="28;35;28;32;28" 
+      dur="4s" 
+      repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Static sun -->
+  <circle cx="240" cy="40" r="18" fill="url(#sunGradient)"/>
+
+  <!-- Earth and sundial group -->
+  <g>
+    <!-- Base earth curve -->
+    <path d="M-40 150 Q150 50 340 150" fill="url(#earthGradient)">
+      <animate 
+        attributeName="d" 
+        values="M-40 150 Q150 50 340 150;
+                M-40 150 Q150 45 340 150;
+                M-40 150 Q150 50 340 150;
+                M-40 150 Q150 55 340 150;
+                M-40 150 Q150 50 340 150" 
+        dur="10s" 
+        repeatCount="indefinite"/>
+    </path>
+
+    <!-- Base sundial -->
+    <path d="M135 115 L135 83 L140.5 115 Z" 
+          fill="#5a1b0f" 
+          opacity="0.9">
+      <animate 
+        attributeName="d" 
+        values="M135 115 L135 83 L140.5 115 Z;
+                M135 113 L135 81 L140.5 113 Z;
+                M135 115 L135 83 L140.5 115 Z;
+                M135 117 L135 85 L140.5 117 Z;
+                M135 115 L135 83 L140.5 115 Z" 
+        dur="10s" 
+        repeatCount="indefinite"/>
+    </path>
+
+    <!-- Sundial's self-shadow overlay -->
+    <path d="M135 115 L135 83 L139 86 L139 115 Z" 
+          fill="url(#dialShadowGradient)">
+      <animate 
+        attributeName="d" 
+        values="M135 115 L135 83 L139 86 L139 115 Z;
+                M135 113 L135 81 L139 84 L139 113 Z;
+                M135 115 L135 83 L139 86 L139 115 Z;
+                M135 117 L135 85 L139 88 L139 117 Z;
+                M135 115 L135 83 L139 86 L139 115 Z" 
+        dur="10s" 
+        repeatCount="indefinite"/>
+    </path>
+
+    <!-- Ground shadow -->
+    <path d="M134 115 L102 140 L140.5 115" 
+          fill="url(#shadowGradient)"
+          opacity="0.8">
+      <animate 
+        attributeName="d" 
+        values="M134 115 L102 140 L140.5 115;
+                M134 113 L102 138 L140.5 113;
+                M134 115 L102 140 L140.5 115;
+                M134 117 L102 142 L140.5 117;
+                M134 115 L102 140 L140.5 115" 
+        dur="10s" 
+        repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
