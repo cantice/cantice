@@ -2,8 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerContainer = document.getElementById('header-container');
     
     if (headerContainer) {
-        fetch('modules/header.html')
-            .then(response => response.text())
+        fetch('./modules/header.html', {
+            method: 'GET',
+            headers: {
+                'Cache-Control': 'no-cache',
+                'Pragma': 'no-cache'
+            },
+            cache: 'no-store'
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
             .then(html => {
                 headerContainer.innerHTML = html;
                 initializeHeader();
