@@ -98,7 +98,7 @@ p {
 }
 
 .btn-primary::after {
-    background-image: url('/icons/arrow-light.svg');
+    background-image: url('icons/arrow-light.svg');
 }
 
 .btn-primary:hover {
@@ -116,7 +116,7 @@ p {
 }
 
 .btn-primary-inverse::after {
-    background-image: url('/icons/arrow-dark.svg');
+    background-image: url('icons/arrow-dark.svg');
 }
 
 .btn-primary-inverse:hover {
