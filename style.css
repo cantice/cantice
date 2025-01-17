@@ -388,7 +388,7 @@ header {
 
 .main-content {
     background: #FFFEFF;
-    padding: 0 2rem 1rem 2rem;
+    padding: 1rem 2rem;
     margin: 0 0 1rem 0;
     border-radius: 8px;
     box-shadow: 0.3125rem 0.3125rem 1.25rem rgba(18, 40, 56, 0.15);
