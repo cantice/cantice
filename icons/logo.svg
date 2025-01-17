@@ -1,0 +1,64 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradient for the lamp base -->
+    <linearGradient id="baseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8f2b18"/>
+      <stop offset="50%" style="stop-color:#762314"/>
+      <stop offset="100%" style="stop-color:#631d10"/>
+    </linearGradient>
+    
+    <!-- Top edge highlight -->
+    <linearGradient id="topHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.4)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0)"/>
+    </linearGradient>
+
+    <!-- Vertical base highlight -->
+    <linearGradient id="verticalHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.2)"/>
+      <stop offset="50%" style="stop-color:rgba(255,255,255,0)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Group everything and center it -->
+  <g transform="translate(50,20)">
+    <!-- Base lamp shape -->
+    <g transform="translate(0,460) scale(0.08,-0.08)" fill="url(#baseGradient)">
+      <path d="M1048 4990 c-216 -37 -393 -201 -443 -412 -8 -35 -15 -101 -15 -148
+      -1 -69 -3 -81 -12 -65 -27 47 -79 59 -119 26 -19 -15 -24 -30 -27 -85 l-4 -66
+      -20 25 c-25 32 -79 34 -108 5 -26 -26 -29 -143 -4 -178 23 -33 86 -31 113 4
+      l21 27 0 -62 c0 -52 4 -66 25 -86 39 -40 96 -31 123 20 9 15 11 -43 12 -227
+      l0 -248 876 0 876 0 -6 -192 c-9 -236 -10 -248 -40 -248 -29 0 -66 -40 -66
+      -71 0 -35 25 -66 60 -74 l30 -7 -5 -81 c-7 -96 -95 -2139 -95 -2191 0 -34 -2
+      -36 -34 -36 -45 0 -80 -41 -72 -84 8 -40 22 -54 62 -62 34 -6 34 -6 34 -63 0
+      -74 -8 -101 -30 -101 -28 0 -59 -32 -66 -67 -6 -28 -2 -37 26 -63 l32 -30
+      -367 0 c-356 0 -369 -1 -402 -21 -33 -20 -73 -83 -73 -114 0 -13 123 -15 1171
+      -15 l1171 0 -7 28 c-11 47 -40 86 -75 104 -31 16 -72 18 -399 18 l-363 0 32
+      30 c28 26 32 35 26 63 -7 35 -38 67 -66 67 -22 0 -30 27 -30 101 0 57 0 57 34
+      63 40 8 54 22 62 64 8 40 -30 82 -76 82 -28 0 -30 3 -30 36 0 52 -88 2095 -95
+      2191 l-5 81 30 7 c58 13 79 83 37 123 -13 12 -33 22 -44 22 -28 0 -30 14 -38
+      248 l-7 192 468 -2 469 -3 3 -555 2 -555 -24 -20 c-84 -70 -69 -208 29 -255
+      51 -25 78 -25 132 0 55 25 83 70 83 135 0 52 -27 110 -55 121 -13 5 -15 79
+      -15 570 l0 564 290 0 290 0 0 246 0 246 26 -31 c19 -23 34 -31 59 -31 51 0 75
+      37 75 113 l0 60 21 -27 c16 -20 29 -26 58 -26 58 0 76 26 76 110 0 84 -18 110
+      -76 110 -29 0 -42 -6 -58 -26 l-21 -27 0 62 c0 52 -4 66 -25 86 -35 35 -76 33
+      -109 -6 l-26 -31 0 86 c0 111 -14 175 -58 265 -47 98 -137 187 -235 236 -138
+      68 -66 65 -1577 64 -751 -1 -1386 -5 -1412 -9z m3132 -1240 l0 -80 -1720 0
+      -1720 0 0 80 0 80 1720 0 1720 0 0 -80z"/>
+    </g>
+
+    <!-- Pull string -->
+    <path d="M200,150 L200,210" stroke="#762314" stroke-width="3" fill="none"/>
+
+    <!-- Top edge highlight -->
+    <g transform="translate(0,460) scale(0.08,-0.08)" fill="url(#topHighlight)" opacity="0.6">
+      <path d="M1048 4990 c-216 -37 -393 -201 -443 -412 l-15 -100 876 0 876 0"/>
+    </g>
+
+    <!-- Vertical base highlight -->
+    <g transform="translate(0,460) scale(0.08,-0.08)" fill="url(#verticalHighlight)" opacity="0.4">
+      <path d="M580 3500 l0 -2000 100 0 0 2000 -100 0"/>
+    </g>
+  </g>
+</svg>
