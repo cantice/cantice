@@ -18,14 +18,14 @@
 
 .search-box input {
     flex: 1;
-    padding: .75em;
+    padding: .75em .25em;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
 }
 
 .search-box button {
-    padding: 8px 12px;
+    padding: 8px 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
     background: #FFFEFF;
