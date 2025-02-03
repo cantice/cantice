@@ -454,6 +454,50 @@ header {
     padding: 0 1rem 1rem 1rem;;
 }
 
+/* Blog post specific styles */
+.post-content {
+    h2, h3, h4 {
+        color: #26373c;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        color: #3a556c;
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+
+    em {
+        font-style: italic;
+    }
+}
+
+/* Blog header image */
+.top-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    margin-bottom: 1.5em;
+}
+
+/* Blog intro section */
+.intro-section {
+    margin: 2em 0;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5em;
+        line-height: 1.2;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: #3a556c;
+    }
+}
+
 /* Footer */
 footer {
     background: #FFFEFF;
