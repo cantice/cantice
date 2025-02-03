@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="container">
+    <section class="more">
+        <div class="more-header">
+            <h2>Blog Posts</h2>
+        </div>
+        <div class="posts-list">
+            {% for post in site.posts %}
+            <div class="post-card">
+                {% if post.image %}
+                <img src="{{ post.image }}" alt="{{ post.title }}">
+                {% endif %}
+                <div class="post-card-content">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ post.url }}" class="btn btn-secondary">
+                        Learn more
+                        <span class="btn-arrow"></span>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
