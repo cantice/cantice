@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Test blog"
+date:   2025-02-03 12:51:58 +0100
+image: images/daylight-saving-time.svg
+category: articles
+tags: [time]
+
+---
+This is a test post to see how Jekyll works. 
+
+Some test features:
+* A bullet point
+* Another point
+
+Here's a [link](#) and some **bold text**.
+
+Coolcoolcool.
