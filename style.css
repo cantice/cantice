@@ -183,7 +183,6 @@ p {
     outline-color: #FFFEFF;
 }
 
-
 /* Header styles */
 header {
     background: #FFFEFF;
@@ -200,7 +199,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 4em;
     padding: 0;
     max-width: 1400px;
     margin: 0 auto;
@@ -213,14 +212,8 @@ header {
 }
 
 .logo {
-    font-size: 1.2em;
-    font-weight: bold;
-    font-family: 'Ubuntu', sans-serif;
+    height: 2em;
     padding: 0 1.5em;
-    white-space: nowrap;
-    text-decoration: none;
-    color: #762314;
-    text-transform: uppercase;
 }
 
 .nav-links {
@@ -232,9 +225,9 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #3a556c;
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     text-transform: uppercase;
     padding: 0 1.5em;
     border-left: solid 1px rgba(160, 160, 160, 0.3);
@@ -355,10 +348,57 @@ header {
     padding: 2rem 1rem 0 1rem;
 }
 
+.nominheight {
+    min-height: 0;
+}
+
 .content-wrapper {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 3rem;
+}
+
+/* Hero section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+    max-width: 28rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.hero-content .btn {
+    margin-right: auto;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
 }
 
 /* Intro section */
@@ -392,23 +432,30 @@ header {
     width: 100%;
     overflow: visible; 
     max-width: 1260px;
-    margin: 0 auto;
-    padding: 1rem 1rem 0 1rem;
+    margin: 3rem auto 0 auto;
+    padding: 0;
+}
+
+.more-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.more-header h2 {
+    margin: 0;
 }
 
 /* Posts list styles */
 .posts-list {
-    grid-column: 1;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 1rem; /* Space for scrollbar */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: #888 #f1f1f1; /* Firefox */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(24.25em, 100%), 1fr));
+    justify-content: start;
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: 0;
 }
 
 /* Scrollbar styling for Webkit browsers */
@@ -434,15 +481,14 @@ header {
     background: #FFFEFF;
     border-radius: 1em;
     overflow: hidden;
-    margin-bottom: 1rem;
+    height: 100%;
+    max-width: 24.25em;
     box-shadow: 0.3125rem 0.3125rem 1.25rem rgba(18, 40, 56, 0.15);
-    flex: 0 0 300;
-    width: auto;
 }
 
 .post-card img {
     width: 100%;
-    height: auto;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -454,56 +500,12 @@ header {
     padding: 0 1rem 1rem 1rem;;
 }
 
-/* Blog post specific styles */
-.post-content {
-    h2, h3, h4 {
-        color: #26373c;
-        margin-top: 1.5em;
-        margin-bottom: 0.5em;
-    }
-
-    p {
-        color: #3a556c;
-        margin-bottom: 1em;
-        font-size: 1.1em;
-        line-height: 1.6;
-    }
-
-    em {
-        font-style: italic;
-    }
-}
-
-/* Blog header image */
-.top-image {
-    width: 100%;
-    height: auto;
-    border-radius: 1em;
-    margin-bottom: 1.5em;
-}
-
-/* Blog intro section */
-.intro-section {
-    margin: 2em 0;
-
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5em;
-        line-height: 1.2;
-    }
-
-    p {
-        font-size: 1.2rem;
-        color: #3a556c;
-    }
-}
-
 /* Footer */
 footer {
     background: #FFFEFF;
     box-shadow: 0.3125rem 0.3125rem 1.25rem rgba(18, 40, 56, 0.15);
     padding: 2rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .footer-content {
@@ -513,7 +515,20 @@ footer {
 }
 
 /* Breakpoints */
-/* Large screens (desktops) - 1024px and above */
+/* Large screens (desktops) - between 1260px and 1025px */
+@media screen and (max-width: 1260px) and (min-width: 1025px) {
+    .posts-list {
+        /* Force exactly 3 columns in this range */
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .post-card {
+        /* Allow cards to adjust width in this range */
+        max-width: 100%;
+    }
+}
+
+/* Large screens (desktops) - between 1024px and 981 */
 @media screen and (max-width: 1024px) {
     p {
         font-size: 1.1em;
@@ -530,7 +545,16 @@ footer {
 
     .content-wrapper {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero {
+        padding: 3rem .5rem;
         gap: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
     }
 
     .main-section {
@@ -538,31 +562,35 @@ footer {
     }
 
     /* Posts section adjustments */
-    .more {
-        padding: 0;
-    }
-
-    .more-title {
-        padding: 0 1.5rem;
-    }
-
     .posts-list {
-        grid-row: 3;
-        grid-column: 1;
-        margin-top: 0;
-        padding: 0.8rem 1.5rem 1rem 1.5rem;
-        /* Remove any flex-wrap if it was added */
+        display: flex;
         flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding-left: 1.5rem;
     }
 
     .post-card {
-        /* Maintain size in mobile view */
         flex: 0 0 300px;
-        width: 300px;
+        min-width: 300px;
+        scroll-snap-align: start;
     }
 
     .post-card img {
         height: 150px;
+    }
+
+    /* Hide scrollbar for cleaner look */
+    .posts-list::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .posts-list {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 }
 
@@ -587,6 +615,33 @@ footer {
         display: none;
     }
 
+    .intro-section {
+        padding: 0 .5em;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem 0 1.5rem;
+        gap: 1.5rem;
+        margin: -1rem -1rem 1rem -1rem;
+    }
+    
+    .hero-content {
+        padding: 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        margin: .5rem 0;
+    }
+    
+    .hero-image {
+        order: -1;
+    }
+
     /* Content adjustments */
     .main-content {
         background: none;
@@ -596,8 +651,15 @@ footer {
         box-shadow: none;
     }
 
-    .intro-section {
-        padding: 0 .5em;
+    .more-header {
+        padding: 0 1.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    /* Only wrap to new line when absolutely necessary */
+    .more-header .btn {
+        margin: 0;
     }
 
     .posts-list {
