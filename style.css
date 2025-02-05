@@ -453,7 +453,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .more-header h2 {
