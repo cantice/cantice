@@ -185,12 +185,8 @@ p {
 
 /* Header styles */
 header {
-    background-color: var(--_color-bg-translucent); /* More transparent white background */
-    backdrop-filter: var(--_filter); /* Creates the frosted glass effect */
-    -webkit-backdrop-filter: var(--_filter); /* For Safari support */
     --_color-bg-translucent: hsla(0, 100%, 100%, .95);
     --_filter: blur(5px) saturate(200%);
-    box-shadow: 0.3125rem 0.3125rem 1.25rem rgba(28, 152, 235, 0.15);
     position: fixed;
     width: 100%;
     top: 0;
@@ -198,6 +194,13 @@ header {
     height: 4em;
     line-height: 4em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+}
+
+.header-wrapper {
+    box-shadow: 0.3125rem 0.3125rem 1.25rem rgba(28, 152, 235, 0.15);
+    background-color: var(--_color-bg-translucent); /* More transparent white background */
+    backdrop-filter: var(--_filter); /* Creates the frosted glass effect */
+    -webkit-backdrop-filter: var(--_filter); /* For Safari support */
 }
 
 .header-content {
@@ -280,10 +283,12 @@ header {
     color: #333;
 }
 
-.mobile-nav {
+mobile-nav {
     display: none;
-    background: #FFFEFF;
-    padding: 1em 1.5em;
+    background-color: var(--_color-bg-translucent);
+    backdrop-filter: var(--_filter);
+    -webkit-backdrop-filter: var(--_filter);
+    padding: .5em 1.5em 1em 1.5em;
     width: 100%;
     max-width: 250px;
     height: 100vh;
@@ -292,8 +297,8 @@ header {
     right: -300px;
     transition: right 0.3s ease;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-    z-index: 900;
-}
+    z-index: 998;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
 
 .mobile-nav.active {
     right: 0;
