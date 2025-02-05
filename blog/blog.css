@@ -45,10 +45,6 @@ h1,h2,h3,h4 {
     color: #a0a0a0;
 }
 
-.breadcrumb-current {
-    color: #762314;
-}
-
 /* Blog Hero Section */
 .blog-hero {
     max-width: 750px;
