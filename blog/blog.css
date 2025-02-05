@@ -58,7 +58,7 @@ h1,h2,h3,h4 {
 /* Featured Image */
 .blog-featured-image {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Desktop version (crop) */
@@ -154,10 +154,6 @@ h1,h2,h3,h4 {
 }
 
 @media screen and (max-width: 768px) {
-    .blog-featured-image {
-        margin-bottom: 2rem;
-    }
-    
     .desktop-image {
         display: none;
     }
