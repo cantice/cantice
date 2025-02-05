@@ -133,6 +133,7 @@ h1 {
 
 .blog-content p, li, ul, ol {
     color: #3a556c;
+    font-size: 1em;
 }
 
 /* Last Updated */
