@@ -33,9 +33,22 @@ h3, h4, h5, h6 {
     margin-top: 1em;
 }
 
-p {
+p, ul, li {
     color: #3a556c;
 }
+
+/* Standard letter styles */
+:where(p,h1,h2,h3,h4,h5,h6) {
+    overflow-wrap: break-word
+}
+
+:where(ul,ol) {
+    padding-inline-start: 1em
+}
+
+:where(ul[role=list],ol[role=list],ul[class],ol[class]) {
+    list-style: none;
+    padding-inline-start:0}
 
 /* Background */
 .gradient-background-animated {
@@ -242,9 +255,8 @@ header {
     color: #3a556c;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
-    font-size: .9em;
     text-transform: uppercase;
-    padding: 0 1.5em;
+    padding: 0 1em;
     border-left: solid 1px rgba(160, 160, 160, 0.3);
     transition: color 0.2s ease;
 }
@@ -283,7 +295,7 @@ header {
     color: #333;
 }
 
-mobile-nav {
+.mobile-nav {
     display: none;
     background-color: var(--_color-bg-translucent);
     backdrop-filter: var(--_filter);
@@ -299,6 +311,7 @@ mobile-nav {
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     z-index: 998;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 .mobile-nav.active {
     right: 0;
@@ -458,7 +471,7 @@ mobile-nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 .more-header h2 {
