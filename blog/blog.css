@@ -11,6 +11,10 @@
     list-style: none;
     padding-inline-start:0}
 
+h1 {
+    text-wrap: pretty;
+}
+
 /* Blog specific styles */
 .container {
     max-width: 1260px;
