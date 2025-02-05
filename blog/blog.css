@@ -154,6 +154,10 @@ h1,h2,h3,h4 {
 }
 
 @media screen and (max-width: 768px) {
+    .blog-featured-image {
+    margin-bottom: 1.5rem;
+    }
+    
     .desktop-image {
         display: none;
     }
