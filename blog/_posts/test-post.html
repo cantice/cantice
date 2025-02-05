@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog post description">
+    <title>Blog Post Title - Cantice</title>
+    <link rel="icon" type="image/x-icon" href="icons/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog/blog.css">
+</head>
+<body class="gradient-background-animated">
+    <div id="header-container"></div>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="/">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="/blog">Blog</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">Current Page</span>
+        </nav>
+
+        <!-- Featured Image -->
+        <div class="blog-featured-image">
+            <div class="desktop-image">
+                <img src="images/daylight-saving-time.svg" alt="Solar Time Illustration">
+            </div>
+            <div class="mobile-image">
+                <img src="images/daylight-saving-time.svg" alt="Solar Time Illustration">
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="blog-hero">
+            <div class="blog-hero-content">
+                <h1>Understanding Solar Time: A Deep Dive into Natural Cycles</h1>
+                <div class="project-tag"><a href="/projects/time">An article in the solar time project</a></div>
+            </div>
+        </div>
+
+        <!-- Blog Content -->
+        <article class="blog-content">
+            <p>That time shown on your clock often differs from what we call <em>local solar time</em>, sometimes by quite a margin. Before railways and fast travel became common in the 19th century, every town simply used their own solar time, where noon was when the sun reached its highest point. This made perfect sense for local life – farmers, merchants, and townspeople could rely on the sun's position to plan their days.</p>
+        
+            <h2>How railways changed time</h2>
+            <p>When it was noon in one town, it might be 12:06 PM in a town 60 miles west, but since travel was slow, this small difference hardly mattered. However, as railways connected distant cities and people needed to coordinate across larger distances, this system became impractical. Imagine trying to publish a train schedule when every town along the route used a different time!</p>
+            
+            <h2>Living on solar time vs. clock time</h2>
+            <p>While time zones make modern life more convenient, they create some interesting effects. For instance, if you live in Boston, which is on the eastern edge of the Eastern Time Zone, the sun reaches its highest point around 11:30 AM during parts of the year. Meanwhile, in Detroit, at the western edge of the same time zone, <em>solar noon</em> might not occur until almost 12:45 PM.</p>
+        
+            <h3>How solar time impacts culture</h3>
+            <p>This difference between <em>clock time</em> and <em>sun time</em> can affect your daily life more than you might think. If you've ever wondered why you feel more energetic at certain times in one city compared to another, or why some place have such lively summer evenings, the difference between local solar time and standardized time zones might be the explanation.</p>
+            <p>Adding to this complexity, the Earth's elliptical orbit means that solar noon can shift by up to 16 minutes throughout the year – a phenomenon known as the Equation of Time. This is why sundials don't always match our clocks, even if you're right in the center of your time zone!</p>            
+            <ul>
+                <li>Hello</li>
+                <li>It's me</li>
+                <li>Pick up</li>
+            </ul>
+
+            <h2>The equation of time</h2>
+            <p>Adding to this complexity, the Earth's elliptical orbit means that solar noon can shift by up to 16 minutes throughout the year – a phenomenon known as the Equation of Time. This is why sundials don't always match our clocks, even if you're right in the center of your time zone!</p>            
+            <!-- Last Updated -->
+            <div class="last-updated">
+                Last updated: <time datetime="2025-02-04">February 4, 2025</time>
+            </div>
+        </article>
+    </main>
+
+
+    <!-- Keep Reading Section -->
+    <section class="more">
+        <div class="more-header">
+            <h2>Keep reading</h2>
+            <a href="/projects" class="btn btn-secondary">All articles</a>
+        </div>
+        <div class="posts-list">
+            <div class="post-card">
+                <img src="images/solar-time-sundial.svg" alt="Local solar time">
+                <div class="post-card-content">
+                    <h3>Local solar time</h3>
+                    <p>How wrong is your clock at home right now? Find out what time it really is at your location.</p>
+                    <button class="btn btn-secondary">
+                        Learn more
+                        <span class="btn-arrow"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="images/daylight-saving-time.svg" alt="Daylight saving">
+                <div class="post-card-content">
+                    <h3>Daylight saving time</h3>
+                    <p>Should you abandon daylight saving time? And if so, do you continue in winter time or summer time?</p>
+                    <button class="btn btn-secondary">
+                        Learn more
+                        <span class="btn-arrow"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="post-card">
+                <img src="images/solar-time-sundial.svg" alt="Local solar time">
+                <div class="post-card-content">
+                    <h3>Local solar time</h3>
+                    <p>How wrong is your clock at home right now? Find out what time it really is at your location.</p>
+                    <button class="btn btn-secondary">
+                        Learn more
+                        <span class="btn-arrow"></span>
+                    </button>
+                </div>
+            </div>
+        </div>   
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Cantice. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
