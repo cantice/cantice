@@ -312,7 +312,7 @@ header {
     -webkit-backdrop-filter: var(--_filter);
     padding: .5em 1.5em 1em 1.5em;
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
     height: 100vh;
     position: fixed;
     top: 4em;
