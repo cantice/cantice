@@ -27,7 +27,7 @@ h1,h2,h3,h4 {
     font-size: 0.9em;
     color: #3a556c;
     margin: 0 0 1rem 1rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: OpenSans, Helvetica, Arial;
 }
 
 .breadcrumb a {
@@ -94,7 +94,7 @@ h1,h2,h3,h4 {
 .project-tag {
     display: inline-block;
     align-items: end;
-    font-family: 'Open Sans', sans-serif;
+    font-family: OpenSans, Helvetica, Arial;
     font-size: 0.9em;
 }
 
@@ -134,7 +134,7 @@ h1,h2,h3,h4 {
 
 /* Last Updated */
 .last-updated {
-    font-family: 'Open Sans', sans-serif;
+    font-family: OpenSans, Helvetica, Arial;
     font-size: 0.9em;
     color: #3a556c;
     margin: 2rem 0 1rem 0;
